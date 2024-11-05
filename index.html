@@ -1,4 +1,55 @@
-<div align="center" style="margin:15px 0px 0px 0px"><script type="text/javascript" src="http://localtimes.info/clock.php?continent=Asia&country=Indonesia&city=Jakarta&widget_number=110&cp3_Hex=FFB200&cp2_Hex=010E54&cp1_Hex=F7FAFC&fwdt=128&ham=1"></script><noscript><a href="http://www.blogpenting.com/">Blog Penting</a></noscript></div>
-	<h1>DIGITAL CLOCK</h1>
-	<h2>MADE BY RAFA</h2>
+<html>
+<head>
+	<title>Jam analog</title>
+</head>
+<body>
+	<style>
+	h1,h2,h3,h4,p,a{
+		font-family: sans-serif;
+		font-weight: normal;
+	}
+	.jam-digital {
+		overflow: hidden;
+		width: 330px;
+		margin: 20px auto;
+		border: 5px solid #f28000;
+	}
+	.kotak{
+		float: left;
+		width: 110px;
+		height: 100px;
+		background-color: #c1c1c1;
+	}
+	.jam-digital p {
+		color: #fff;
+		font-size: 36px;
+		text-align: center;
+		margin-top: 30px;
+	}
+</style>
+ 
+<center>
+	<h3>ANALOG CLOCK</h3>
+	<h4>VENOM</h4>
 </center>
+<div class="jam-digital">
+	<div class="kotak"><p id="jam"></p></div>
+	<div class="kotak"><p id="menit"></p></div>
+	<div class="kotak"><p id="detik"></p></div>
+</div>
+ 
+<center><p>MADE BY RAFA</p></center>
+ 
+<script>
+	window.setTimeout("waktu()", 1000);
+ 
+	function waktu() {
+		var waktu = new Date();
+		setTimeout("waktu()", 1000);
+		document.getElementById("jam").innerHTML = waktu.getHours();
+		document.getElementById("menit").innerHTML = waktu.getMinutes();
+		document.getElementById("detik").innerHTML = waktu.getSeconds();
+	}
+</script>
+</body>
+</html>
